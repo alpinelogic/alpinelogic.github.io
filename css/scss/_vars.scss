@@ -1,0 +1,58 @@
+/**
+ * Grid
+ */
+$col-gap: 1.75%;
+$col-gap-large: 3%;
+
+$col-size-100: 100%;
+$col-size-50: 50%;
+
+$col-size-33: 33.333333333%;
+$col-size-66: 66.666666667%;
+
+$col-size-25: 25%;
+$col-size-75: 75%;
+
+$col-size-20: 20%;
+$col-size-80: 80%;
+$col-size-60: 60%;
+$col-size-40: 40%;
+
+$col-size-10: 10%;
+
+
+/**
+ * Fonts
+ */
+$primary-font: "Lato", sans-serif;
+$secondary-font: "Josefin Sans", sans-serif;
+
+
+/**
+ * Colors
+ */
+$primary-dark-color: #6D6B72;
+$primary-light-color: #EBE7F7;
+$muted-light-color: #B9B7BE;
+$color-white: #fff;
+$nav-hover-color: #EBD4F8;
+$body-background-color: #FDFCFD;
+$link-color-light: #AB97DF;
+$link-color-light--hover: #8F77CE;
+$gray-block-color: rgba(231, 228, 235, 0.18);
+
+
+/**
+ * Paths
+ */
+$path-images: "../images/";
+$path-fonts: $path-images + "fonts/";
+$path-backgrounds: $path-images + "backgrounds/";
+$path-sponsors: $path-images + "sponsors/";
+
+
+/**
+ * Site header nav
+ */
+$header-height: 3.625em;
+$header-height-large: 3.325em;

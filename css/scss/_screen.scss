@@ -1,0 +1,168 @@
+/* 540px (33.75 x 16) */
+@media screen and (min-width: 33.75em) {
+  .leaderboard {
+    background-position: center center;
+    height: 20em;
+
+    h1 { font-size: 2.125em; }
+  }
+
+  .sponsors a {
+    width: 28%;
+    padding: 3% 2%;
+  }
+}
+
+
+
+/* 650px (40.625 x 16) */
+@media screen and (min-width: 40.625em) {
+  .sponsors {
+    a {
+      width: 24%;
+      padding: 4% 2%;
+    }
+  }
+}
+
+
+
+/* 720px */
+@media screen and (min-width: 45em) {
+  .leaderboard {
+    height: 22em;
+
+    h1 { font-size: 2.25em; }
+    small { font-size: 1em; }
+  }
+
+  .innertext { width: 84%; }
+
+  .recent-projects {
+    .project .inner { min-height: 300px; }
+  }
+}
+
+
+
+/* 800px */
+@media screen and (min-width: 50em) {
+  .leaderboard { height: 24em; }
+  .innertext { width: 74%; }
+}
+
+
+
+/* 900px */
+@media screen and (min-width: 56.25em) {
+  body { font-size: 117%; }
+
+  .header {
+    height: $header-height-large;
+
+    /* Make fixed */
+    position: fixed;
+    left: 0;
+    right: 0;
+    opacity: .98;
+
+    .header-link { line-height: $header-height-large; }
+    .logo { font-size: 1.425em; line-height: 2.3; }
+
+    .nav-toggle {
+      font-size: 1.875em;
+
+      .icon-list {
+        position: relative;
+        top: -.125em;
+      }
+    }
+  }
+
+  .navigation a {
+    font-size: .9125em;
+  }
+
+
+  /* Switch Navs */
+  .nav-toggle, .top-nav { display: none; }
+  .desktop-nav { display: block; }
+
+
+  .leaderboard {
+    /* 
+     * When the header is fixed we have to push down the leaderboard. 
+     */
+    margin-top: $header-height-large;
+    height: 24em;
+
+    h1 { font-size: 2em; }
+    small {
+      font-size: .875em;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+
+  .innertext { width: 64%; }
+
+  .sponsors {
+    padding: 0 3em;
+
+    a {
+      padding: 3.5% 3%;
+    }
+  }
+
+  #footer { padding: 2em; }
+}
+
+
+
+/* 1224px */
+@media screen and (min-width: 76.5em) {
+  .container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .innertext { width: 58%; }
+
+  .leaderboard {
+    h1 { font-size: 2.25em; }
+    small { font-size: .95em; }
+  }
+
+  .recent-projects {
+    .project .inner {
+      padding: 1.5em;
+      padding-top: 1.75em;
+    }
+  }
+
+  .sponsors {
+    padding: 0 4.5em;
+
+    a {
+      width: 24%;
+      padding: 3.25% 3.25%;
+    }
+  }
+
+  #footer { padding: 3em; }
+}
+
+
+
+/* 1340px */
+@media screen and (min-width: 83.75em) {
+  body { font-size: 125%; }
+
+  .innertext { width: 64%; }
+
+  .leaderboard {
+    height: 23em;
+
+    h1 { font-size: 2.425em; }
+    small { font-size: 1.125em; }
+  }
+}

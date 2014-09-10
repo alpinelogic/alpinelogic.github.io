@@ -1,0 +1,141 @@
+/**
+ * General Helpers
+ * ==========================================================================
+ */
+.clearfix {
+  &:before, 
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+.gray-block { background: $gray-block-color; }
+
+/**
+ * Vertically Align Blocks
+ */
+.valign-block { text-align: center; }
+.valign-block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.valign {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/**
+ * Float helpers
+ */
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+
+/**
+ * Other
+ */
+.noround { border-radius: 0 !important; }
+.transparent { opacity: 0; }
+
+
+
+/**
+ * Text Helpers
+ * ==========================================================================
+ */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-thin { font-weight: 300; }
+.text-normal { font-weight: 400; }
+.text-bold { font-weight: 700; }
+
+
+
+/**
+ * CSS3 Mixins
+ * ==========================================================================
+ */
+@mixin box-shadow($props...) {
+  -moz-box-shadow: $props;
+  -webkit-box-shadow: $props;
+  -ms-box-shadow: $props;
+  -o-box-shadow: $props;
+  box-shadow: $props;
+}
+@mixin transition($props...) {
+  -moz-transition: $props;
+  -webkit-transition: $props;
+  -ms-transition: $props;
+  -o-transition: $props;
+  transition: $props;
+}
+@mixin background-size($type: cover) {
+  -moz-background-size: $type;
+  -webkit-background-size: $type;
+  -ms-background-size: $type;
+  -o-background-size: $type;
+  background-size: $type;
+}
+
+
+
+/**
+ * Triangle Mixins
+ * ==========================================================================
+ */
+@mixin triangle($size) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $size;
+}
+
+@mixin upwards-triangle($color) {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) $color rgba(0, 0, 0, 0);
+}
+
+@mixin downwards-triangle($color) {
+  border-color: $color rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+@mixin centered-triangle($size) {
+  position: absolute;
+  left: 50%;
+  margin-left: -$size;
+  z-index: 251;
+}
+
+@mixin centered-upwards-triangle($color, $size) {
+  @include triangle($size);
+  @include upwards-triangle($color);
+  @include centered-triangle($size);
+}
+
+@mixin centered-downwards-triangle($color, $size) {
+  @include triangle($size);
+  @include downwards-triangle($color);
+  @include centered-triangle($size);
+}
+
+@mixin animation-delay($delay) {
+  -moz-animation-delay: $delay;
+  -webkit-animation-delay: $delay;
+  -ms-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;  
+}
+
+
+
+/**
+ * JavaScript Helpers
+ * ==========================================================================
+ */
+.grow-header {
+  font-size: 1.1875em;
+}
