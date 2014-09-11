@@ -1,7 +1,7 @@
 .button {
   display: inline-block;
   margin-bottom: 0;
-  border: 1px solid rgba(0, 0, 0, .05);
+  border: 1px solid rgba(144, 115, 173, 0.15);
   border-radius: 3px;
   padding: .665em 2.25em;
 
@@ -18,9 +18,7 @@
   -ms-user-select: none;
   user-select: none;
 
-  opacity: .92;
-  box-shadow: 0 0 3px -1px rgba(214, 208, 218, 0.3);
-
+  opacity: .94;
   &:hover { opacity: 1; }
 }
 

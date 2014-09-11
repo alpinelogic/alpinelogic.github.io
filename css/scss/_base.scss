@@ -12,8 +12,11 @@ body {
   font: {
     size: 100%; /* 16px */
     family: $primary-font;
-    weight: 400;
+    weight: normal;
   }
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .base-font { font-size: 1em; }
@@ -51,6 +54,7 @@ ul, ol {
 p {
   margin: 0;
   margin-bottom: .875em;
+  line-height: 1.4;
 }
 
 a {

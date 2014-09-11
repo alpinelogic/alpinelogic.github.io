@@ -3,7 +3,6 @@
   .leaderboard {
     background-position: center center;
     height: 20em;
-
     h1 { font-size: 2.125em; }
   }
 
@@ -31,16 +30,12 @@
 @media screen and (min-width: 45em) {
   .leaderboard {
     height: 22em;
-
     h1 { font-size: 2.25em; }
     small { font-size: 1em; }
   }
 
   .innertext { width: 84%; }
-
-  .recent-projects {
-    .project .inner { min-height: 300px; }
-  }
+  .recent-projects .project .inner { min-height: 300px; }
 }
 
 
@@ -56,18 +51,16 @@
 /* 900px */
 @media screen and (min-width: 56.25em) {
   body { font-size: 117%; }
+  .mobile-nav { display: none !important; }
 
   .header {
-    height: $header-height-large;
+    &, .inner { height: $header-height-large; }
 
     /* Make fixed */
     position: fixed;
     left: 0;
     right: 0;
-    opacity: .98;
-
-    .header-link { line-height: $header-height-large; }
-    .logo { font-size: 1.425em; }
+    opacity: .99;
 
     .nav-toggle {
       font-size: 1.875em;
@@ -77,11 +70,11 @@
         top: -.125em;
       }
     }
+
+    .logo { font-size: 1.6em; }
   }
 
-  .navigation a {
-    font-size: .9125em;
-  }
+  .navigation a { font-size: .97em; }
 
 
   /* Switch Navs */
@@ -93,13 +86,12 @@
     /* 
      * When the header is fixed we have to push down the leaderboard. 
      */
-    margin-top: $header-height-large;
-    height: 24em;
+    padding-top: $header-height-large;
+    height: 27.425em;
 
     h1 { font-size: 2em; }
     small {
       font-size: .875em;
-      font-weight: 300;
       line-height: 1.5;
     }
   }
@@ -108,10 +100,7 @@
 
   .sponsors {
     padding: 0 3em;
-
-    a {
-      padding: 3.5% 3%;
-    }
+    a { padding: 3.5% 3%; }
   }
 
   #footer { padding: 2em; }
@@ -122,8 +111,8 @@
 /* 1224px */
 @media screen and (min-width: 76.5em) {
   .container {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 9.4%;
+    padding-right: 9.4%;
   }
   .innertext { width: 58%; }
 
@@ -156,12 +145,10 @@
 /* 1340px */
 @media screen and (min-width: 83.75em) {
   body { font-size: 125%; }
-
   .innertext { width: 64%; }
 
   .leaderboard {
     height: 23em;
-
     h1 { font-size: 2.425em; }
     small { font-size: 1.125em; }
   }
