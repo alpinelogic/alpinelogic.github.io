@@ -74,7 +74,8 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= meta.banner %>',
         report: 'gzip',
-        compress: true
+        compress: true,
+        sourceMap: true,
       },
 
       dist: {
@@ -89,6 +90,39 @@ module.exports = function(grunt) {
      * JSHINT
      */
     jshint: {
+      options: {
+        // Report JSHint errors but not fail the task
+        force: true,
+
+        // Ignore warnings
+        '-W030': true, // `e && e.preventDefault()`
+
+        globals: {
+          window: true,
+          console: true
+        },
+
+        // Enforcing
+        'camelcase': true,     // Identifiers must be in camelCase
+        'curly'    : true,     // Require {} for every new block or scope
+        'eqeqeq'   : true,     // Require triple equals (===) for comparison
+        'forin'    : true,     // Require filtering for..in loops with obj.hasOwnProperty()
+        'immed'    : true,     // Require immediate invocations to be wrapped in parens e.g. `(function () { } ());`
+        'indent'   : 2,        // Number of spaces to use for indentation
+        'latedef'  : false,    // Require variables/functions to be defined before being used
+        'newcap'   : true,     // Require capitalization of all constructor functions e.g. `new F()`
+        'noempty'  : true,     // Prohibit use of empty blocks
+        'plusplus' : true,     // Prohibit use of `++` & `--`
+        'quotmark' : 'single', // Require single quotes
+        'undef'    : true,     // Require all non-global variables to be declared (prevents global leaks)
+        'unused'   : false,    // Require all defined variables be used
+        'strict'   : true,     // Requires all functions run in ES5 Strict Mode
+        'maxparams': 3,        // Max number of formal params allowed per function
+
+        // Relaxing
+        'debug'    : true     // Allow debugger statements e.g. browser breakpoints.        
+      },
+
       src: ['js/app.js']
     },
 
