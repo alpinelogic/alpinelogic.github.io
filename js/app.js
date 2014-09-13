@@ -16,7 +16,7 @@ var
     },
 
     isIterable: function(elements) {
-      return elements.length && this.typeOf(elements) !== 'string' ? true : false;
+      return elements.length && this.typeOf(elements) !== 'String' ? true : false;
     },
 
     find: function(selector, context) {
