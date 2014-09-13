@@ -243,6 +243,7 @@
 
   .project {
     position: relative;
+    overflow: hidden;
     background: #FFFEFF;
     box-shadow: 0 0 3px -1px rgba(214, 208, 218, 0.3);
 
@@ -269,7 +270,6 @@
       text-transform: uppercase;
       -webkit-font-smoothing: antialiased;
       background: #FFF;
-
       &:hover { color: $link-color-light--hover; }
     }
 
@@ -281,18 +281,31 @@
       line-height: 1.4;
     }
 
+    @mixin project-gradient-border($bg, $c1, $c2, $c3) {
+      background: $bg;
+      @include gradient-background-image(45deg, $c1 25%, $c2 50%, $c3 75%);
+    }
+
     &:before {
       content: " ";
       display: block;
       height: .25em;
-      background: #8D8891;
-      @include gradient-background-image(45deg, rgba(120, 113, 126, 0.75) 25%, rgba(162, 174, 185, 0.2) 50%, rgba(178, 169, 182, 0.7) 75%);
+      @include project-gradient-border(
+        #8D8891, 
+        rgba(120, 113, 126, 0.75), 
+        rgba(162, 174, 185, 0.2), 
+        rgba(178, 169, 182, 0.7)
+      );
     }
 
-    &.active, &:hover {
+    &.active {
       &:before {
-        background: #AF87CF;
-        @include gradient-background-image(45deg, rgba(182, 139, 216, 0.75) 25%, rgba(228, 32, 94, 0.2) 50%, rgba(207, 110, 149, 0.7) 75%);
+        @include project-gradient-border(
+          #AF87CF, 
+          rgba(182, 139, 216, 0.75), 
+          rgba(228, 32, 94, 0.2), 
+          rgba(207, 110, 149, 0.7)
+        );      
       }
     }
   }
