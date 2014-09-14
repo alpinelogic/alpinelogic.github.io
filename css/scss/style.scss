@@ -397,6 +397,8 @@
 }
 .interest-tabs {
   position: relative;
+  padding-left: 1px;
+  padding-right: 1px;
   padding-bottom: 1.125em;
   text-align: center;
 
@@ -428,8 +430,10 @@
     .arrow { display: inline; }
   }
 
-  @include mobile-2-cols(1.5%);
-  [class*='blox-']:last-child { @include col-width(100%, 1.5%); }
+  .flow {
+    @include mobile-2-cols(1.5%);
+    [class*='blox-']:last-child { @include col-width(100%, 1.5%); }    
+  }
 }
 
 

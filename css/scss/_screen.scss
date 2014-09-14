@@ -36,8 +36,10 @@
   .recent-projects .project .inner { min-height: 300px; }
 
   .interest-tabs {
-    @include change-cols($col-size-33, .75%);
-    [class*='blox-']:last-child { @include col-width($col-size-33, .75%); }
+    .flow {
+      @include change-cols($col-size-33, 1%);
+      [class*='blox-']:last-child { @include col-width($col-size-33, 1%); }      
+    }
   }
 }
 
