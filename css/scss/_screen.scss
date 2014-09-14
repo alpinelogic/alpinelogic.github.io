@@ -6,9 +6,9 @@
     h1 { font-size: 2.125em; }
   }
 
-  .sponsors a {
-    width: 28%;
-    padding: 3% 2%;
+  .sponsors {
+    @include sponsor-cols($col-size-33, 3%);
+    [class*='blox-'] { padding: 4% 2.75%; }
   }
 }
 
@@ -17,10 +17,8 @@
 /* 650px (40.625 x 16) */
 @media screen and (min-width: 40.625em) {
   .sponsors {
-    a {
-      width: 24%;
-      padding: 4% 2%;
-    }
+    @include sponsor-cols($col-size-25, 3%);
+    [class*='blox-'] { padding: 4% 2%; }
   }
 }
 
@@ -36,6 +34,17 @@
 
   .innertext { width: 84%; }
   .recent-projects .project .inner { min-height: 300px; }
+
+  .interest-tabs {
+    .blox-1-2 { margin-bottom: $col-gap; }
+
+    .books, .photography { text-align: right; }
+    .travel, .music { text-align: left; }
+    .books a, .travel a { width: 59%; }
+    .photography a, .music a { width: 79%; }
+  }
+
+  #playlist-summit { display: block; }
 }
 
 
@@ -44,6 +53,11 @@
 @media screen and (min-width: 50em) {
   .leaderboard { height: 24em; }
   .innertext { width: 74%; }
+
+  .sponsors {
+    @include sponsor-cols($col-size-20, 2%);
+    [class*='blox-'] { padding: 3.5% 1.5%; }
+  }
 }
 
 
@@ -97,10 +111,8 @@
   }
 
   .innertext { width: 64%; }
-
   .sponsors {
-    padding: 0 3em;
-    a { padding: 3.5% 3%; }
+    [class*='blox-'] { padding: 3.5% 1.75%; }
   }
 
   #footer { padding: 2em; }
@@ -111,8 +123,8 @@
 /* 1224px */
 @media screen and (min-width: 76.5em) {
   .container {
-    padding-left: 9%;
-    padding-right: 9%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
   .innertext { width: 58%; }
 
@@ -129,12 +141,8 @@
   }
 
   .sponsors {
-    padding: 0 4.5em;
-
-    a {
-      width: 24%;
-      padding: 3.25% 3.25%;
-    }
+    /*@include sponsor-cols(16.665%, 2%);*/
+    [class*='blox-'] { padding: 3.25% 1.5%; }
   }
 
   #footer { padding: 3em; }
