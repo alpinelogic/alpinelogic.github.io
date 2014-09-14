@@ -389,6 +389,12 @@
   border-top: 1px solid rgba(243, 238, 245, 0.5);
   @include box-shadow(inset 0 0 15px -4px rgba(62, 52, 77, 0.04));
 
+  .section-title {
+    border-bottom: 1px solid #F0ECF3;
+    margin-bottom: 1.125em;
+    padding-bottom: 1.325em;
+  }
+
   iframe {
     opacity: .88;
     @include transition(opacity .25s);
@@ -397,9 +403,7 @@
 }
 .interest-tabs {
   position: relative;
-  padding-left: 7.25em;
-  padding-right: 7.25em;
-  padding-bottom: 2.125em;
+  padding-bottom: 1.7em;
   text-align: center;
 
   a {
