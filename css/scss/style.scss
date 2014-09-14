@@ -403,7 +403,7 @@
   a {
     display: block;
     font-size: .7em;
-    padding: .665em 1em;
+    padding: .7em 1em;
 
     color: #FFF;
     text-decoration: none;
@@ -429,7 +429,7 @@
   }
 
   @include mobile-2-cols(1.5%);
-  [class*='blox-']:last-child { width: 100%; }
+  [class*='blox-']:last-child { @include col-width(100%, 1.5%); }
 }
 
 
