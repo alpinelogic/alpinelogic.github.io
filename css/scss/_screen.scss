@@ -10,6 +10,12 @@
     @include change-cols($col-size-33, 3%);
     [class*='blox-'] { padding: 4% 2.75%; }
   }
+
+  .interests {
+    .tall-image {
+      max-height: 468px;
+    }
+  }
 }
 
 
@@ -19,6 +25,21 @@
   .sponsors {
     @include change-cols($col-size-25, 3%);
     [class*='blox-'] { padding: 4% 2%; }
+  }
+
+  .interests {
+    .tall-image {
+      margin: 0 2em 1em 0;
+      max-height: 100%;
+      width: 37%;
+      float: left;
+
+      @include transform(rotate(-4deg) translate(-.5em, 0.25em));
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .section-title { margin-top: 0; }
   }
 }
 
@@ -35,16 +56,7 @@
   .innertext { width: 84%; }
   .recent-projects .project .inner { min-height: 300px; }
 
-  .interests {
-    .section-title {
-      border-bottom: 1px solid #EEE9F1;
-      margin-bottom: 2.7%;
-      padding-bottom: 2.35%;
-    }
-  }
-  .interest-tabs {
-    padding-bottom: 2.125%;
-  }
+
 }
 
 
@@ -57,6 +69,12 @@
   .sponsors {
     @include change-cols($col-size-20, 2%);
     [class*='blox-'] { padding: 3.5% 1.5%; }
+  }
+
+  .interests {
+    .tall-image {
+      width: 30%;
+    }
   }
 }
 
@@ -101,7 +119,7 @@
      * When the header is fixed we have to push down the leaderboard. 
      */
     padding-top: $header-height-large;
-    height: 27.425em;
+    height: 28em;
 
     h1 { font-size: 2em; }
     small {
@@ -113,6 +131,13 @@
   .innertext { width: 64%; }
   .sponsors {
     [class*='blox-'] { padding: 3.5% 1.75%; }
+  }
+
+  .interests {
+    .tall-image {
+      margin: 0 2em 1em 0;
+      max-height: 396px;
+    }
   }
 
   #footer { padding: 2em; }
@@ -141,8 +166,13 @@
   }
 
   .sponsors {
-    /*@include change-cols(16.665%, 2%);*/
     [class*='blox-'] { padding: 3.25% 1.5%; }
+  }
+
+  .interests {
+    .tall-image {
+      width: 29%;
+    }
   }
 
   #footer { padding: 3em; }
@@ -156,7 +186,7 @@
   .innertext { width: 64%; }
 
   .leaderboard {
-    height: 23em;
+    height: 26em;
     h1 { font-size: 2.425em; }
     small { font-size: 1.125em; }
   }

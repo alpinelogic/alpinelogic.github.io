@@ -12,6 +12,11 @@
 }
 
 .gray-block { background: $gray-block-color; }
+.dark-block {
+  background: #262529;
+  background: rgba(38, 37, 41, 0.97);
+  color: #E0DDE6;
+}
 
 /**
  * Vertically Align Blocks
@@ -74,6 +79,14 @@
   -ms-transition: $props;
   -o-transition: $props;
   transition: $props;
+}
+
+@mixin transform($props...) {
+  -moz-transform: $props;
+  -webkit-transform: $props;
+  -ms-transform: $props;
+  -o-transform: $props;
+  transform: $props;
 }
 
 @mixin background-size($type: cover) {
