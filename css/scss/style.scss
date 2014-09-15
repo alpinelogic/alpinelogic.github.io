@@ -433,11 +433,6 @@
     box-shadow: inset 0 0 .665em 0 rgba(65, 40, 80, 0.08);
     .arrow { display: inline; }
   }
-
-  .flow {
-    @include mobile-2-cols(1.5%);
-    [class*='blox-']:last-child { @include col-width(100%, 1.5%); }    
-  }
 }
 
 

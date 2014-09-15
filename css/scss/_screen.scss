@@ -44,13 +44,6 @@
   }
   .interest-tabs {
     padding-bottom: 2.125%;
-    padding-left: 7.25em;
-    padding-right: 7.25em;
-
-    .flow {
-      @include change-cols($col-size-33, 1%);
-      [class*='blox-']:last-child { @include col-width($col-size-33, 1%); }      
-    }
   }
 }
 
