@@ -31,12 +31,7 @@
     .tall-image {
       margin: 0 2em 1em 0;
       max-height: 100%;
-      width: 37%;
       float: left;
-
-      @include transform(rotate(-4deg) translate(-.5em, 0.25em));
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
     }
 
     .section-title { margin-top: 0; }
@@ -56,7 +51,12 @@
   .innertext { width: 84%; }
   .recent-projects .project .inner { min-height: 300px; }
 
-
+  .hobbies-list ul { padding-left: 2em; }
+  .interests .tall-image {
+    @include transform(rotate(-4deg) translate(-.5em, 0.25em));
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;    
+  }
 }
 
 
@@ -69,12 +69,6 @@
   .sponsors {
     @include change-cols($col-size-20, 2%);
     [class*='blox-'] { padding: 3.5% 1.5%; }
-  }
-
-  .interests {
-    .tall-image {
-      width: 30%;
-    }
   }
 }
 
@@ -167,12 +161,6 @@
 
   .sponsors {
     [class*='blox-'] { padding: 3.25% 1.5%; }
-  }
-
-  .interests {
-    .tall-image {
-      width: 29%;
-    }
   }
 
   #footer { padding: 3em; }
