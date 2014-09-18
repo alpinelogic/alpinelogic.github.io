@@ -13,7 +13,8 @@
 
   .interests {
     .tall-image {
-      max-height: 468px;
+      max-height: 440px;
+      img { margin: -6em 0; }
     }
   }
 }
@@ -29,11 +30,9 @@
 
   .interests {
     .tall-image {
-      margin: 0 2em 1em 0;
-      max-height: 100%;
-      float: left;
+      margin-right: 12%;
+      max-height: 480px;
     }
-
     .section-title { margin-top: 0; }
   }
 }
@@ -51,11 +50,19 @@
   .innertext { width: 84%; }
   .recent-projects .project .inner { min-height: 300px; }
 
-  .hobbies-list ul { padding-left: 2em; }
+  .hobbies-list ul {
+    padding-left: 2.5em;
+  }
   .interests .tall-image {
+    max-height: 100%;
+    margin: 18.5% 15% 0 0;
     @include transform(rotate(-4deg) translate(-.5em, 0.25em));
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;    
+    backface-visibility: hidden;   
+
+    img {
+      margin: 0;
+    } 
   }
 }
 
@@ -129,7 +136,6 @@
 
   .interests {
     .tall-image {
-      margin: 0 2em 1em 0;
       max-height: 396px;
     }
   }
