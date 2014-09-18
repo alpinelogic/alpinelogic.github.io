@@ -415,10 +415,10 @@
 }
 .hobbies-list li {
   border-bottom: 1px dashed #808080;
-  padding-bottom: .5em;
-  margin-bottom: .665em;
+  padding: .625em 0;
   font-size: .925em;
 }
+.hobbies-list li:first-child { padding-top: 6px; }
 
 
 
