@@ -28,7 +28,7 @@
 .bg-header:after {
   content: "";
   bottom: 0;
-  @include centered-upwards-triangle($body-background-color, 1.425em);
+  @include centered-upwards-triangle($body-background-color, 1.325em);
 }
 
 .header {
