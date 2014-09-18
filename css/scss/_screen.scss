@@ -56,7 +56,7 @@
   .interests .section-title { margin-bottom: 30px; }
   .interests .tall-image {
     max-height: 100%;
-    margin: 18.5% 15% 0 0;
+    margin: 12.5% 15% 0 0;
     @include transform(rotate(-4deg) translate(-.5em, 0.25em));
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;   

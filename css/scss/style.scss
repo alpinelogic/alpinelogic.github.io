@@ -323,7 +323,6 @@
   background: #7452A7 url($path-backgrounds + 'purple-blue-poly.png') center center no-repeat;
   background-attachment: fixed;
   @include background-size;
-  @include box-shadow(0 3px .75em 0 rgba(63, 47, 77, 0.07));
 
   .inner {
     border-top: 1px solid rgba(205, 167, 240, 0.1);
@@ -385,9 +384,11 @@
  * Interests
  */
 .interests {
-  border-top: 5px solid rgba(128, 122, 134, 0.6);
   position: relative;
   overflow: hidden;
+
+  background: url($path-backgrounds + 'snowy-peak.jpg');
+  @include background-size;
 
   .section-content { overflow: hidden; }
 
