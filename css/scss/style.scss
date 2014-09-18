@@ -427,28 +427,6 @@
  * Footer
  * ==========================================================================
  */
-#scrollUp {
-  display: block;
-  position: fixed;
-  bottom: 17px;
-  right: 17px;
-  z-index: 1001;
-  padding: 2px;
-  font-size: 34px;
-  line-height: 100%;
-  color: $color-white;
-  text-decoration: none;
-  background: #4D4358;
-  background: rgba(77, 67, 88, 0.8);
-  opacity: .52;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-
-  &:hover { opacity: .92; }
-}
-
 #footer {
   position: relative;
   z-index: 100; /* 50 - 150 */
