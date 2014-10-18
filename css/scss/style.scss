@@ -388,45 +388,41 @@
   border-top: 1px solid #F7F5F8;
 
   h2 { margin-top: 0; }
+  h2 small { font-size: 74%; }
 
   a {
     text-decoration: none;
     color: #5C5761;
     opacity: .9;
-
-    @include transition(none);
+    &:hover { opacity: 1; color: #a686c5; }
+    @include transition(opacity .15s ease-out, color .15s ease-out);
   }  
 }
 .contact {
   position: relative;
   background: #faf8fa;
 
-  h2 {
-    margin-bottom: .665em;
-  }
+  h2 { margin-bottom: .5em; }
 
   .big-text {
     margin: 0;
 
     a {
-      color: #a686c5;
       font-size: 1.665em;
       font-weight: 300;
       opacity: .8;
-
-      &:hover { opacity: 1; }
     }
   }
 }
 .contact-social {
+  border-bottom: 1px solid transparent;
+
   .social {
     margin: 0;
 
     a {
       font-size: 1.425em;
       margin: 0 .875em;
-
-      &:hover { opacity: 1; color: #a686c5; }
     }
   }
 }
