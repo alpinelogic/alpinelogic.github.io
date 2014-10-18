@@ -71,7 +71,64 @@ var
 
 
 
-// Main Navigation
+// Pages
+// -----------------------------
+var 
+  pages = IC.pages = {
+    initialize: function() {
+      var ids, entries;
+
+      if (!this._entries) {
+        ids = ['projects', 'contact', 'about'];
+        entries = this._entries = {};
+
+        ids.forEach(function(id) {
+          var element = doc.getElementById(id);
+
+          if (!entries[id]) {
+            entries[id] = {
+              element: element,
+              top: element.offsetTop
+            };
+          }
+        });
+      }
+    },
+
+    get: function(id) {
+      if (this._entries && this._entries[id]) {
+        return this._entries[id];
+      }
+    },
+
+    toJSON: function() {
+      return this._entries;
+    },
+
+    toArray: function() {
+      var result = [], p;
+
+      for(p in this._entries) {
+        if (this._entries.hasOwnProperty(p)) {
+          result.push(this._entries[p]);
+        }
+      }
+
+      return result;
+    }
+  };
+
+
+
+// Site Header
+// -----------------------------
+var 
+  siteHeader = doc.getElementById('site-header'),
+  siteHeaderHeight = siteHeader.offsetHeight;
+
+
+
+// Navigation - Mobile
 // -----------------------------
 var 
   navToggle = util.find('.nav-toggle-mobile'),
@@ -84,6 +141,33 @@ var
   }
 
   navToggle.addEventListener('click', toggleTopNav, false);
+
+
+
+// Navigation - Desktop
+// -----------------------------
+var 
+  desktopNav = util.find('.desktop-nav');
+
+  util.on(win, 'load', function initDesktopNav() {
+    util.on(desktopNav, 'click', function(e) {
+      var idSelector = '', page;
+
+      if (e && e.target.tagName.toLowerCase() === 'a') {
+        e.preventDefault();
+        idSelector = e.target.hash && e.target.hash.slice(1);
+
+        if (idSelector === 'home' || !idSelector) {
+          win.scrollTo(0, 0);
+        } else {
+          page = pages.get(idSelector);
+          win.scrollTo(0, Math.round((page && page.top || siteHeaderHeight) - siteHeaderHeight));
+        }
+      }
+    });
+
+    pages.initialize();
+  });
 
 
 
