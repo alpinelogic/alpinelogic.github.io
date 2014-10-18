@@ -124,7 +124,7 @@ var
 // -----------------------------
 var 
   siteHeader = doc.getElementById('site-header'),
-  siteHeaderHeight = siteHeader.offsetHeight;
+  siteHeaderHeight = Math.round(siteHeader.getBoundingClientRect().height);
 
 
 
