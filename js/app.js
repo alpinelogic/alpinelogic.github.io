@@ -9,14 +9,11 @@ var
   win = window,
   doc = win.document,
   _slice = Array.prototype.slice,
+  _forEach = Array.prototype.forEach,
 
   util = IC.util = {
     typeOf: function(elem) {
       return ({}).toString.call(elem).slice(8, -1);
-    },
-
-    isIterable: function(elements) {
-      return elements.length && this.typeOf(elements) !== 'String' ? true : false;
     },
 
     find: function(selector, context) {
@@ -71,33 +68,58 @@ var
 
 
 
+// Site Header
+// -----------------------------
+var 
+  siteHeader = doc.getElementById('site-header'),
+  siteHeaderHeight = Math.round(siteHeader.getBoundingClientRect().height);
+
+
+
 // Pages
 // -----------------------------
 var 
   pages = IC.pages = {
     initialize: function() {
-      var ids, entries;
-
       if (!this._entries) {
-        ids = ['projects', 'contact', 'about'];
-        entries = this._entries = {};
-
-        ids.forEach(function(id) {
-          var element = doc.getElementById(id);
-
-          if (!entries[id]) {
-            entries[id] = {
-              element: element,
-              top: element.offsetTop
-            };
-          }
-        });
+        this._create();
       }
+    },
+
+    _create: function() {
+      this._ids = [];
+      this._entries = {};
+
+      _forEach.call(util.findAll('.pseudo-page'), function(el) {
+        var id = el.id;
+
+        if (this._ids.indexOf(id) === -1) {
+          this._ids.push(id);
+        }
+
+        if (!this._entries[id]) {
+          this._entries[id] = {
+            element: el,
+            top: el.offsetTop
+          };
+        }
+      }, this);
     },
 
     get: function(id) {
       if (this._entries && this._entries[id]) {
         return this._entries[id];
+      }
+    },
+
+    navigate: function(id) {
+      var page;
+
+      if (id === 'home' || !id) {
+        win.scrollTo(0, 0);
+      } else {
+        page = this.get(id);
+        win.scrollTo(0, Math.round((page && page.top || siteHeaderHeight) - siteHeaderHeight));
       }
     },
 
@@ -117,14 +139,6 @@ var
       return result;
     }
   };
-
-
-
-// Site Header
-// -----------------------------
-var 
-  siteHeader = doc.getElementById('site-header'),
-  siteHeaderHeight = Math.round(siteHeader.getBoundingClientRect().height);
 
 
 
@@ -149,20 +163,13 @@ var
 var 
   desktopNav = util.find('.desktop-nav');
 
+  // Wrap in 'load' event to make sure their offsetTop position is ready.
   util.on(win, 'load', function initDesktopNav() {
-    util.on(desktopNav, 'click', function(e) {
-      var idSelector = '', page;
 
+    util.on(desktopNav, 'click', function(e) {
       if (e && e.target.tagName.toLowerCase() === 'a') {
         e.preventDefault();
-        idSelector = e.target.hash && e.target.hash.slice(1);
-
-        if (idSelector === 'home' || !idSelector) {
-          win.scrollTo(0, 0);
-        } else {
-          page = pages.get(idSelector);
-          win.scrollTo(0, Math.round((page && page.top || siteHeaderHeight) - siteHeaderHeight));
-        }
+        pages.navigate(e.target.hash && e.target.hash.slice(1));
       }
     });
 
