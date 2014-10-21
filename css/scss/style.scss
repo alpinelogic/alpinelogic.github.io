@@ -205,7 +205,8 @@
 }
 
 .promo-links {
-  margin-top: .875em;
+  margin: 0;
+  padding: .875em 0;
   @include animation-delay(.85s);
 
   .hire-me {
