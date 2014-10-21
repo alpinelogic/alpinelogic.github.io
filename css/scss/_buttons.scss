@@ -3,9 +3,9 @@
   margin-bottom: 0;
   border: 1px solid rgba(144, 115, 173, 0.15);
   border-radius: 3px;
-  padding: .665em 2.25em;
+  padding: .665em 1.935em;
 
-  font-size: .75em;
+  font-size: .789473684em;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
@@ -25,4 +25,8 @@
 .button.small {
   padding: .325em 1em;
   font-size: .665em;
+}
+
+.button.large {
+  font-size: .875em;
 }

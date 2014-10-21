@@ -204,6 +204,23 @@
   small { @include animation-delay(.95s); }
 }
 
+.promo-links {
+  margin-top: .875em;
+  @include animation-delay(.85s);
+
+  .hire-me {
+    border-color: $color-white;
+
+    font-size: .789473684em;
+    font-weight: 700;
+    color: $color-white;
+    opacity: .9;
+
+    @include transition(all .2s);
+    &:hover { opacity: 1; }
+  }
+}
+
 
 
 /**
@@ -400,9 +417,18 @@
 }
 .contact {
   position: relative;
-  background: #faf8fa;
+  background: url($path-backgrounds + 'bg_crossword.png');
 
-  h2 { margin-bottom: .5em; }
+  .section-content {
+    background: rgba(250, 248, 250, 0.6);
+  }
+
+  .contact-icon {
+    font-size: 1.935em;
+    margin-bottom: 0;
+  }
+
+  /*h2 { margin-bottom: .5em; }*/
 
   .big-text {
     margin: 0;

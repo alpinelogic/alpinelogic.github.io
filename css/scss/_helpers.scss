@@ -45,6 +45,7 @@
  */
 .noround { border-radius: 0 !important; }
 .transparent { opacity: 0; }
+.hidden { visibility: hidden; }
 
 
 
@@ -158,6 +159,3 @@
  * JavaScript Helpers
  * ==========================================================================
  */
-.grow-header {
-  font-size: 1.1875em;
-}

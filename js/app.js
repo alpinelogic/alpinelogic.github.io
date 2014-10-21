@@ -178,6 +178,19 @@ var
 
 
 
+// Promo links
+// -----------------------------
+var 
+  promoLinks = util.find('.promo-links');
+
+  win.setTimeout(function() {
+    promoLinks.classList.add('fadeInUp');
+    promoLinks.classList.add('animated');
+    promoLinks.classList.remove('hidden');
+  }, 150);
+
+
+
 // Recent Projects
 // -----------------------------
 var 
