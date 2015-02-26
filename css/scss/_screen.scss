@@ -23,8 +23,6 @@
 
 /* 650px (40.625 x 16) */
 @media screen and (min-width: 40.625em) {
-  .action-banner blockquote:before { display: block; }
-  
   .sponsors {
     @include change-cols($col-size-25, 3%);
     [class*='blox-'] { padding: 4% 2%; }

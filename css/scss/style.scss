@@ -350,20 +350,16 @@
   .section-content { padding-bottom: 3.875em; }
 
   blockquote {
+    font-size: .9375em;
     font-style: italic;
-    text-shadow: 2px 2px 1px rgba(85, 52, 126, 0.65);
-
-    &:before {
-      display: none;
-      height: 0;
-      content: "“";
-      margin-left: -.665em;
-      font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
-      color: #C4AEF2;
-    }
+    text-align: center;
+    text-shadow: 2px 2px 0 rgba(85, 52, 126, 0.65);
   }
 
-  cite { font-size: .875em; }
+  cite {
+    font-size: .935em;
+    font-weight: 300;
+  }
 }
 
 
