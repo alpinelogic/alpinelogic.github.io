@@ -336,23 +336,23 @@
  */
 .action-banner {
   position: relative;
-  border-top: .325em solid rgba(60, 26, 97, 0.3);
+  /*border-top: .325em solid rgba(60, 26, 97, 0.3);*/
   color: $primary-light-color;
   background: #7452A7 url($path-backgrounds + 'purple-blue-poly.png') center center no-repeat;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   @include background-size;
 
   .inner {
-    border-top: 1px solid rgba(205, 167, 240, 0.1);
+    /*border-top: 1px solid rgba(205, 167, 240, 0.1);*/
     background: rgba(100, 61, 168, 0.7);
   }
 
-  .section-content { padding-bottom: 3.875em; }
+  /*.section-content { padding-bottom: 3.875em; }*/
 
   blockquote {
     font-size: .9375em;
     font-style: italic;
-    text-align: center;
+    /*text-align: center;*/
     text-shadow: 2px 2px 0 rgba(85, 52, 126, 0.65);
   }
 
