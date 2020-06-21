@@ -1,8 +1,8 @@
 {
-  "name": "istocode",
-  "title": "ISTOCODE",
+  "name": "alpinelogic",
+  "title": "alpinelogic",
   "version": "0.5.0",
-  "homepage": "http://istocode.github.io/",
+  "homepage": "http://alpinelogic.github.io/",
   "author": "Billy Onjea",
   "dependencies": {},
   "devDependencies": {
